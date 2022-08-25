@@ -1,0 +1,406 @@
+* {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bodyWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(./pictures/background.jpeg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftSection {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  align-items: center;
+}
+
+.shuffleButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 280px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transform: scale(0.1);
+  visibility: 0;
+  opacity: 0;
+}
+
+.shuffleButton.active {
+  visibility: 1;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.shuffleButton:hover {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.shuffleButton span {
+
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.shuffleButton:hover span{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.difficultyInput {
+  text-align: center;
+  outline: none;
+  background-color: rgba(17, 133, 187, 0);
+  border-radius: 20px;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+}
+
+/* popup */
+
+
+.popupWrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transform: translate(0px, -100%);
+  transition: 0.5s;
+}
+
+.popup {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 430px;
+  gap: 30px;
+  height: 590px;
+}
+
+.popupWrapper.active {
+  transform: translate(0px, 0px);
+  backdrop-filter: blur(2px);
+}
+
+.ancientCard {
+  transition: .5s;
+  border-radius: 10px;
+  width: 200px;
+  height: 280px;
+  background-size: 100% 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05),
+              0 2px 2px rgba(0, 0, 0, 0.05),
+              0 4px 4px rgba(0, 0, 0, 0.05),
+              0 8px 8px rgba(0, 0, 0, 0.05),
+              0 16px 16px rgba(0, 0, 0, 0.05),
+              0 32px 32px rgba(0, 0, 0, 0.05);  
+}
+
+.ancientCard.active {
+  position: fixed;
+  left: 100px;
+  top: 150px;
+}
+
+.ancientCard.big {
+transform: translate(100%, 0px) scale(2);
+}
+
+#azathoth {
+  background-image: url(./assets/Ancients/Azathoth.png);
+}
+#cthulhu {
+  background-image: url(./assets/Ancients/Cthulhu.png);
+}
+#iogSothoth {
+  background-image: url(./assets/Ancients/IogSothoth.png);
+}
+#shubNiggurath {
+  background-image: url(./assets/Ancients/ShubNiggurath.png);
+}
+
+
+/* right section */
+
+.rightSection {
+  position: relative;
+  padding-right: 5%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* topBlock */
+
+.topBlock {
+  margin-top: -50px;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.counter {
+  padding: 20px;
+  border-radius: 10px;
+  width: 160px;
+  height: 240px;
+  background: radial-gradient(rgb(236, 221, 206) 50%, rgb(173, 170, 164));
+    
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05),
+              0 2px 2px rgba(0, 0, 0, 0.05),
+              0 4px 4px rgba(0, 0, 0, 0.05),
+              0 8px 8px rgba(0, 0, 0, 0.05),
+              0 16px 16px rgba(0, 0, 0, 0.05),
+              0 32px 32px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.5s;
+  transform: translate(0px, -200%);
+}
+
+.counter.active {
+  transform: translate(0px, 0%);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  color: rgba(29, 23, 23, 0.7);
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.stageRounds {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.stageRounds div {
+  border: 5px solid;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stageRounds div span {
+  color: rgba(29, 23, 23, 0.7);
+  font-weight: bold;
+}
+
+.greenRound {
+  color: rgba(25, 135, 21, 0.7);
+}
+.brownRound {
+  color: rgba(98, 63, 23, 0.7);
+}
+.blueRound {
+  color: rgba(25, 89, 156, 0.7);
+}
+
+/* bottomBlock */
+
+.bottomBlock {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50%;
+  gap: 40px;
+}
+
+.cardsDeckUl {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 100%;
+  width: 200px;
+  order: 1;
+  z-index: 4;
+}
+
+.doneUl {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  order: 0;
+}
+
+.stageTitle {
+  transition: 0.5s;
+}
+
+.stageTitle.red {
+  color: rgba(193, 12, 12, 0.7);
+}
+
+
+.cardLi:last-child {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.cardLi:last-child:hover {
+  transform: scale(1.1);
+}
+
+.cardLi {
+  position: absolute;
+  left: calc(50% - 100px);
+  /* top: calc(50% - 140px); */
+  width: 200px;
+  height: 280px;
+  border-radius: 10px;
+
+  transform: translate(0px, 0px);
+  transition: 0.5s;
+  background-size: 100% 100%;
+
+}
+
+.cardLi div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 0.5s;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-size: 100% 100%;
+} 
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  transition: 0.5s;
+  
+}
+
+.front {
+  background-image: url(./assets/cardCover.png);
+  transform: perspective(600px) rotateY(0deg);
+  transition: 0.5s;
+}
+
+.cardLi.rotate .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.cardLi.rotate .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.cardLi.move {
+  transition: 0.5s;
+  transform: translate(0px, 1000px);
+}
+
+.cardLi.hide {
+  transform: translate(0px, 1000px);
+}
+
+.cardLi.rotate.done {
+  transform: translate(-240px, 0px);
+}
+
+/* animation */
+
+.textAnimation {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.textAnimation:hover {
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cardAnimation {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.cardAnimation:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./pictures/logo_mini.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Eldritch Horror</title>
+</head>
+<body>
+  <div class="bodyWrapper">
+    <header class="header">
+      <div class="chooseAncient textAnimation">
+        Выберете древнего
+      </div>
+    </header>
+    <main class="main">
+      <section class="leftSection">
+        
+      </section>
+      <section class="centerSection">
+        <div class="shuffleButton textAnimation">
+          <span class="shuffleText">ЗАМЕШАТЬ</span>
+          <span class="shuffleText">КОЛОДУ</span>
+        </div>
+      </section>
+      <section class="rightSection">
+        <div class="topBlock">
+          <div class="counter cardAnimation">
+            <div class="stage firstSt">
+              <h3 class="stageTitle st1Title">
+                Стадия 1
+              </h3>
+              <div class="stageRounds">
+                <div class="greenRound">
+                  <span id="firstGreen">0</span>
+                </div>
+                <div class="brownRound">
+                  <span id="firstBrown">0</span>
+                </div>
+                <div class="blueRound">
+                  <span id="firstBlue">0</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="stage secondSt">
+              <h3 class="stageTitle st2Title">
+                Стадия 2
+              </h3>
+              <div class="stageRounds">
+                <div class="greenRound">
+                  <span id="secondGreen">0</span>
+                </div>
+                <div class="brownRound">
+                  <span id="secondBrown">0</span>
+                </div>
+                <div class="blueRound">
+                  <span id="secondBlue">0</span>
+                </div>
+              </div>
+            
+            </div>
+            <div class="stage thirdSt">
+              <h3 class="stageTitle st3Title">
+                Стадия 3
+              </h3>
+              <div class="stageRounds">
+                <div class="greenRound">
+                  <span id="thirdGreen">0</span>
+                </div>
+                <div class="brownRound">
+                  <span id="thirdBrown">0</span>
+                </div>
+                <div class="blueRound">
+                  <span id="thirdBlue">0</span>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+        <div class="bottomBlock">
+          <ul class="cardsDeckUl">
+
+          </ul>
+          <ul class="doneUl">
+          
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <form class="difficultyForm" name="difficultyForm">
+        <select name="difficultyInput" class="difficultyInput textAnimation">
+          <option selected disabled value="chooseLevel">Выберете уровень сложности</option>
+          <option value="veryHard">Очень высокий</option>
+          <option value="hard">Высокий</option>
+          <option value="normal">Средний</option>
+          <option value="easy">Лёгкий</option>
+          <option value="veryEasy">Очень лёгкий</option>
+        </select>
+      </form>
+    </footer>
+  </div>
+  
+<!-- popup ancients -->
+
+<div class="popupWrapper">
+  <div class="popup">
+    <div class="ancientCard cardAnimation" id="azathoth"></div>
+    <div class="ancientCard cardAnimation" id="cthulhu"></div>
+    <div class="ancientCard cardAnimation" id="iogSothoth"></div>
+    <div class="ancientCard cardAnimation" id="shubNiggurath"></div>
+  </div>
+</div>
+
+
+<script src="./index.js" type="module"></script>
+</body>
+</html>
