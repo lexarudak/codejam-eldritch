@@ -1,3 +1,7 @@
+#  Deploy
+https://lexarudak.github.io/codejam-eldritch/
+
+
 # Eldritch Horror Codejam
 
 ## Описание проекта
